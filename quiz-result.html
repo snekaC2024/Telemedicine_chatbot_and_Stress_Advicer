@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .score {
+            font-size: 1.5em;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .view-answers {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .view-answers a {
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        .correct-answers {
+            width: 160px;
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+        }
+        .correct-answers:hover{
+            background-color: #22c949;
+        }
+        .retake-button {
+            width:160px;
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background-color: #a72828;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+        }
+        .retake-button:hover {
+            background-color: #ff0101;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Your Quiz Results</h1>
+
+        <div class="score">
+            <!-- This will display the user's score -->
+            You got <span id="userScore"></span> out of 10 correct!
+        </div>
+
+        <div class="view-answers">
+            <!-- Link to view the correct answers -->
+            <a href="correct-answers.html" class="correct-answers">Correct Answers</a>
+        </div>
+
+        <a href="health-quiz.html" class="retake-button">Retake Quiz</a>
+    </div>
+
+    <script>
+        // Retrieve the user's score from sessionStorage
+        const userScore = sessionStorage.getItem('quizScore');
+        document.getElementById('userScore').textContent = userScore;
+
+        // Optionally, clear the sessionStorage to reset the quiz state
+        sessionStorage.clear();
+    </script>
+</body>
+</html>

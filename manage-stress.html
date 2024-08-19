@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Manage Stress Effectively</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .menu-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            justify-content: flex-end;
+            background-color: #508ab3;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .menu-icon div {
+            width: 35px;
+            height: 5px;
+            background-color: white;
+            margin: 6px 0;
+            cursor: pointer;
+        }
+
+        .menu-icon i {
+            font-size: 24px;
+            color: white;
+        }   
+        .nav-list {
+            display: none; /* Hidden by default */
+            background-color: #5e90b3;
+            position: absolute;
+            top: 50px;
+            right: 10px;
+            list-style-type: none;
+            padding: 10px;
+            margin: 0;
+            border-radius: 5px;
+        }
+
+        .nav-list li {
+            margin: 10px 0;
+        }
+
+        .nav-list a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            display: block;
+        }
+
+        .nav-list a:hover {
+            text-decoration: underline;
+        }
+
+        .menu-icon.active + .nav-list {
+            display: block; /* Show menu when icon is clicked */
+        }
+        header {
+            background: #508ab3;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background-color: white;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #ff009d;
+        }
+        .article-container, .video-container {
+            margin-bottom: 20px;
+        }
+        h3 {
+            color:#7d1b7d;
+        }
+        .article {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            color: #333;
+        }
+        .article:nth-of-type(1) {
+            background-color: #e0f7fa; /* Light cyan */
+        }
+        .article:nth-of-type(2) {
+            background-color: #fce4ec; /* Light pink */
+        }
+        .article:nth-of-type(3) {
+            background-color: #f3e5f5; /* Light lavender */
+        }
+        .article a {
+            color: #0073e6;
+            text-decoration: none;
+        }
+        .video iframe {
+            width: 100%;
+            height: 315px;
+        }
+        .interactive-tools {
+            margin-top: 30px;
+            padding: 20px;
+            background: #e8f0fe;
+        }
+        .interactive-tools h3 {
+            color: #0073e6;
+        }
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-icon" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <ul class="nav-list">
+        <li><a href="index.html">Main Page</a></li>
+        <li><a href="get-health-advice.html">Get Health Advice</a></li>
+        <li><a href="check-symptoms.html">System Checker</a></li>
+        <li><a href="health-quiz.html">Health Quiz</a></li>
+        <li><a href="expert-advice.html">Experts Advice</a></li>
+        <li><a href="manage-stress.html">Manage Stress</a></li>
+    </ul>
+<header>
+    <h1>How to Manage Stress Effectively</h1>
+</header>
+
+<div class="container">
+    <section>
+        <h2>Introduction</h2>
+        <p>Managing stress is crucial for maintaining both mental and physical health. On this page, you'll find expert advice, articles, and videos to help you manage stress effectively.</p>
+    </section>
+
+    <section class="article-container">
+        <h2>Featured Articles</h2>
+
+        <div class="article">
+            <h3>The Science of Stress and How It Affects You</h3>
+            <p>This article explains what stress is, how it affects the body and mind, and why it’s essential to manage it.</p>
+            <ul>
+                <li>What is Stress?</li>
+                <li>The Impact of Chronic Stress</li>
+                <li>Why Managing Stress is Crucial</li>
+            </ul>
+            <p><a href="article1.html">Read More</a></p>
+        </div>
+
+        <div class="article">
+            <h3>Top 5 Mindfulness Techniques to Reduce Stress</h3>
+            <p>A detailed guide on mindfulness practices that can help reduce stress.</p>
+            <ul>
+                <li>Introduction to Mindfulness</li>
+                <li>Techniques: Breathing Exercises, Meditation, Body Scanning, etc.</li>
+                <li>How to Incorporate Mindfulness into Daily Life</li>
+            </ul>
+            <p><a href="article2.html">Read More</a></p>
+        </div>
+
+        <div class="article">
+            <h3>Time Management Strategies for a Stress-Free Life</h3>
+            <p>Practical tips and strategies to manage time effectively and reduce stress.</p>
+            <ul>
+                <li>Prioritization Techniques</li>
+                <li>The Pomodoro Technique Explained</li>
+                <li>Avoiding Multitasking</li>
+            </ul>
+            <p><a href="article3.html">Read More</a></p>
+        </div>
+    </section>
+
+    <section class="video-container">
+        <h2>Featured Videos</h2>
+
+        <div class="video">
+            <h3>Guided Meditation for Stress Relief</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/tuPW7oOudVc?si=Iqf0nsDBkIDl3QoS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="video">
+            <h3>Simple Exercises to Reduce Stress</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/0cUSzOJEDHo?si=2f2M4SGOxFgBbEo3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="video">
+            <h3>Stress Management Tips from Experts</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Nz9eAaXRzGg?si=8pKYhejccTMNYO7A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section class="conclusion">
+        <h2>Conclusion</h2>
+        <p>Start with one or two techniques that resonate with you and practice them daily. Consistency is key to managing stress effectively. Remember, it’s okay to seek help if you need it.</p>
+    </section>
+</div>
+
+<div class="footer">
+    <p>&copy; 2024 Stress Management Resources</p>
+</div>
+
+<script src="js/nav-bar.js"></script>
+
+</body>
+</html>

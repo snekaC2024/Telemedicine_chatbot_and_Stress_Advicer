@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telemedicine Chatbot and Stress Advicer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Telemedicine Chatbot and Stress Advicer</h1>
+        </header>
+
+        <main>
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide" style="background-image: url('img/1image.jpg');"></div>
+                    <div class="slide" style="background-image: url('img/image2.jpg');"></div>
+                    <div class="slide" style="background-image: url('img/image3.jpg');"></div>
+                    <div class="slide" style="background-image: url('img/image4.jpg');"></div>
+                    <div class="slide" style="background-image: url('img/image6.jpg');"></div>
+                    <div class="slide" style="background-image: url('img/image7.jpg');"></div>
+                </div>
+                  <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                  <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+
+                <div class="chatbox">
+                   <p>Welcome! How can I assist you today?</p>
+                   <button onclick="startChat('Check Symptoms')">Check Symptoms</button>
+                   <button onclick="startChat('Get Health Advice')">Get Health Advice</button>
+                   <button onclick="startChat('Advise from Experts')">Advise from Experts</button>
+                </div>
+        </main>    
+        
+        <footer>
+            <p>&copy; 2024 Telemedicine Chatbot & Advices. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+    <script src="js/script.js"></script>
+</html>

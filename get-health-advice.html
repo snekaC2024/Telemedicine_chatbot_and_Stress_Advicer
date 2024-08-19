@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Health Advice</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        
+.menu-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            justify-content: flex-end;
+            background-color: #508ab3;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .menu-icon div {
+            width: 35px;
+            height: 5px;
+            background-color: white;
+            margin: 6px 0;
+            cursor: pointer;
+        }
+
+        .menu-icon i {
+            font-size: 24px;
+            color: white;
+        }   
+        .nav-list {
+            display: none; /* Hidden by default */
+            background-color: #5e90b3;
+            position: absolute;
+            top: 50px;
+            right: 10px;
+            list-style-type: none;
+            padding: 10px;
+            margin: 0;
+            border-radius: 5px;
+        }
+
+        .nav-list li {
+            margin: 10px 0;
+        }
+
+        .nav-list a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            display: block;
+        }
+
+        .nav-list a:hover {
+            text-decoration: underline;
+        }
+
+        .menu-icon.active + .nav-list {
+            display: block; /* Show menu when icon is clicked */
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        header {
+            background: #508ab3;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        ul h3 a {
+            color: #ed0268;
+            text-decoration:underline;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+    
+        .section h2 {
+            color: #095aa7;
+        }
+        .resources, .contact-info, .disclaimer {
+            border-top: 2px solid #ddd;
+            padding-top: 10px;
+        }
+        .resources a, .contact-info a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .resources a:hover, .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-icon" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <ul class="nav-list">
+        <li><a href="index.html">Main Page</a></li>
+        <li><a href="get-health-advice.html">Get Health Advice</a></li>
+        <li><a href="check-symptoms.html">System Checker</a></li>
+        <li><a href="health-quiz.html">Health Quiz</a></li>
+        <li><a href="expert-advice.html">Experts Advice</a></li>
+        <li><a href="manage-stress.html">Manage Stress</a></li>
+    </ul>
+
+    <div class="container">
+        <header>
+            <h1>Get Health Advice</h1>
+        </header>
+
+        <section class="intro section">
+            <h2>Introduction</h2>
+            <p>Welcome to the Get Health Advice page. Here, you can find general health information and tips. Please remember that this advice is not a substitute for professional medical consultation. For personalized advice, consult a healthcare professional.</p>
+        </section>
+
+        <section class="health-topics section">
+            <h2>Health Topics</h2>
+            <p>Explore the following health topics to find advice and information relevant to your needs:</p>
+            
+            <ul>
+            <li>
+             <div class="topic">
+                <h3><a href="diet-nutrution.html">Diet and Nutrition</a></h3>
+                <p>Learn about balanced diets, nutritional requirements, and how to make healthier food choices. Find tips on managing weight, understanding food labels, and incorporating essential nutrients into your meals.</p>
+             </div>
+            </li>
+            
+            <li>
+            <div class="topic">
+                <h3><a href="exercise-and-fitness.html">Exercise and Fitness</a></h3>
+                <p>Discover effective exercise routines, fitness tips, and how to stay active. Get advice on building strength, improving cardiovascular health, and creating a workout plan that fits your lifestyle and goals.</p>
+            </div>
+            </li>
+
+            <li>
+            <div class="topic">
+                <h3><a href="stress-management.html">Stress Management</a></h3>
+                <p>Find strategies for managing stress and improving mental well-being. Explore techniques such as mindfulness, relaxation exercises, and time management skills to help reduce stress and maintain a healthy balance in your life.</p>
+            </div>
+            </li>
+
+            <li>
+            <div class="topic">
+                <h3><a href="chronic-conditions.html">Chronic Conditions</a></h3>
+                <p>Get information on managing chronic conditions such as diabetes, hypertension, and asthma. Learn about treatment options, lifestyle changes, and resources to help you effectively manage your condition and improve your quality of life.</p>
+            </div>
+            </li>
+            </ul>
+        </section>
+
+        <section class="interactive-tools section">
+            <h2>Interactive Tools</h2>
+            <p>Use our <b> <a style="color:#f37221; font-style: oblique; font-size: 20px;" href="check-symptoms.html">symptom checker</a></b> to assess your health status or try our <b> <a style="font-size: 20px;font-style: oblique; color: darkmagenta;" href="health-quiz.html">health quiz</a> </b> to learn more about your health needs.</p>
+        </section>
+
+        <section class="expert-advice section">
+            <h2>Advice from Experts</h2>
+            <p>Read articles and watch videos from healthcare professionals:</p>
+            <ul >
+                <li><a  style ="color: #088960; font-weight: 900;" href="manage-stress.html">How to Manage Stress Effectively</a></li>
+                <li><a style ="color: #088960; font-weight: 900;" href="tips-balanced-diet.html">Tips for a Balanced Diet</a></li>
+                <li><a style ="color: #088960; font-weight: 900;" href="excercise-routines-beginners.html">Exercise Routines for Beginners</a></li>
+                </ul>
+        </section>
+
+      
+
+        <section class="contact-info section">
+            <h2>Contact Information</h2>
+            <p>If you need personalized advice, please reach out to us:</p>
+            <p>Email us at: <a href="mailto:support@healthsite.com">support@healthsite.com</a></p>
+            <p>Or use our <a href="#">contact form</a> to ask specific questions.</p>
+        </section>
+
+        <section class="disclaimer section">
+            <h2>Disclaimer</h2>
+            <p>The information provided on this page is for general purposes only and should not be considered medical advice. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.</p>
+        </section>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Get Health Advice </p>
+    </div>
+    
+    <script src="js/nav-bar.js"></script>
+</body>
+</html>

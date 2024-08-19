@@ -1,0 +1,139 @@
+/* General Styles */
+body {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container Styles */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #fff;
+}
+
+/* Header Styles */
+header {
+    background: #003572;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Main Content Styles */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #fffbfb;
+    border-radius: 8px;
+    margin: 20px;
+    background-color: #d3d9e8;
+}
+
+.slider {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    overflow: hidden;
+    margin: 20px auto;
+    border-radius: 50px;
+    border-style:inherit;
+    box-shadow: #0b0b0b8b 6px 9px 12px;
+}
+
+.slides {
+    display: contents;
+    transition: 4ms ease;
+    border-radius: 50px;   
+}
+
+.slide {
+    min-width: 100%;
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+}
+
+button {
+    background: #3f91de;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: hsl(211, 100%, 35%); /* Accent color */
+}
+
+/* Slider Navigation */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Chatbox Styles */
+.chatbox {
+    background: #2263ee;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.chatbox p {
+    margin: 5px 20px 30px;
+}
+
+.chatbox button {
+    background: #4992b4;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.chatbox button:hover {
+    background: #1c2fc3; /* Accent color */
+}
+
+/* Footer Styles */
+footer {
+    background: #003572;
+    padding: 10px;
+    text-align: center;
+}
+

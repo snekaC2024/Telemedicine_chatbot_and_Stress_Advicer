@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Quiz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .menu-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            justify-content: flex-end;
+            background-color: #508ab3;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .menu-icon div {
+            width: 35px;
+            height: 5px;
+            background-color: white;
+            margin: 6px 0;
+            cursor: pointer;
+        }
+
+        .menu-icon i {
+            font-size: 24px;
+            color: white;
+        }   
+        .nav-list {
+            display: none; /* Hidden by default */
+            background-color: #5e90b3;
+            position: absolute;
+            top: 50px;
+            right: 10px;
+            list-style-type: none;
+            padding: 10px;
+            margin: 0;
+            border-radius: 5px;
+        }
+
+        .nav-list li {
+            margin: 10px 0;
+        }
+
+        .nav-list a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            display: block;
+        }
+
+        .nav-list a:hover {
+            text-decoration: underline;
+        }
+
+        .menu-icon.active + .nav-list {
+            display: block; /* Show menu when icon is clicked */
+        }
+
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #a22ad5;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question h2 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+        .answers input[type="radio"] {
+            margin-right: 10px;
+        }
+        .submit-button {
+            display: block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #0066cc;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .submit-button:hover {
+            background-color: #005bb5;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-icon" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <ul class="nav-list">
+        <li><a href="index.html">Main Page</a></li>
+        <li><a href="get-health-advice.html">Get Health Advice</a></li>
+        <li><a href="check-symptoms.html">System Checker</a></li>
+        <li><a href="health-quiz.html">Health Quiz</a></li>
+        <li><a href="expert-advice.html">Experts Advice</a></li>
+        <li><a href="manage-stress.html">Manage Stress</a></li>
+    </ul>
+
+    <div class="container">
+        <header>
+            <h1>Health Quiz</h1>
+        </header>
+
+        <form id="quiz-form" onsubmit="handleSubmit(event)">
+            <div class="question">
+                <h2>1. What is the recommended daily intake of water for most adults?</h2>
+                <div class="answers">
+                    <label><input type="radio" name="q1" value="a"> 4 cups</label><br>
+                    <label><input type="radio" name="q1" value="b"> 8 cups</label><br>
+                    <label><input type="radio" name="q1" value="c"> 12 cups</label><br>
+                    <label><input type="radio" name="q1" value="d"> 16 cups</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h2>2. Which of these is a high-protein food?</h2>
+                <div class="answers">
+                    <label><input type="radio" name="q2" value="a"> Bread</label><br>
+                    <label><input type="radio" name="q2" value="b"> Apples</label><br>
+                    <label><input type="radio" name="q2" value="c"> Chicken</label><br>
+                    <label><input type="radio" name="q2" value="d"> Lettuce</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h2>3. How many times a day should you brush your teeth?</h2>
+                <div class="answers">
+                    <label><input type="radio" name="q3" value="a"> Once</label><br>
+                    <label><input type="radio" name="q3" value="b"> 3-4 times</label><br>
+                    <label><input type="radio" name="q3" value="c"> 5-7 times</label><br>
+                    <label><input type="radio" name="q3" value="d"> Twice</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h2>4. What is the recommended amount of sleep for most adults?</h2>
+                <div class="answers">
+                    <label><input type="radio" name="q4" value="a"> 4-5 hours</label><br>
+                    <label><input type="radio" name="q4" value="b"> 6-7 hours</label><br>
+                    <label><input type="radio" name="q4" value="c"> 8-9 hours</label><br>
+                    <label><input type="radio" name="q4" value="d"> 10-12 hours</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h2>5. Which vitamin is produced when the skin is exposed to sunlight?</h2>
+                <div class="answers">
+                    <label><input type="radio" name="q5" value="a"> Vitamin A</label><br>
+                    <label><input type="radio" name="q5" value="b"> Vitamin B</label><br>
+                    <label><input type="radio" name="q5" value="c"> Vitamin C</label><br>
+                    <label><input type="radio" name="q5" value="d"> Vitamin D</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h2>6. What is one of the best ways to prevent the spread of illness?</h2>
+                <div class="answers">
+                    <label><input type="radio" name="q6" value="a"> Avoiding exercise</label><br>
+                    <label><input type="radio" name="q6" value="b"> Eating more sugar</label><br>
+                    <label><input type="radio" name="q6" value="c"> Washing hands regularly</label><br>
+                    <label><input type="radio" name="q6" value="d"> Taking antibiotics daily</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h2>7. Which type of fat is considered healthy for the heart?</h2>
+                <div class="answers">
+                    <label><input type="radio" name="q7" value="a"> Saturated fats</label><br>
+                    <label><input type="radio" name="q7" value="b"> Trans fats</label><br>
+                    <label><input type="radio" name="q7" value="c"> Monounsaturated fats</label><br>
+                    <label><input type="radio" name="q7" value="d"> None of the above</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h2>8. Which food group is most important for a balanced diet?</h2>
+                <div class="answers">
+                    <label><input type="radio" name="q8" value="a"> Fats</label><br>
+                    <label><input type="radio" name="q8" value="b"> Sugars</label><br>
+                    <label><input type="radio" name="q8" value="c"> Vegetables</label><br>
+                    <label><input type="radio" name="q8" value="d"> Salts</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h2>9. What is a benefit of regular physical activity?</h2>
+                <div class="answers">
+                    <label><input type="radio" name="q9" value="a"> Increased fatigue</label><br>
+                    <label><input type="radio" name="q9" value="b"> Improved cardiovascular health</label><br>
+                    <label><input type="radio" name="q9" value="c"> Decreased muscle strength</label><br>
+                    <label><input type="radio" name="q9" value="d"> Weakened immune system</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h2>10. What is one key factor in maintaining a healthy weight?</h2>
+                <div class="answers">
+                    <label><input type="radio" name="q10" value="a"> Eating junk food</label><br>
+                    <label><input type="radio" name="q10" value="b"> Exercising regularly</label><br>
+                    <label><input type="radio" name="q10" value="c"> Skipping meals</label><br>
+                    <label><input type="radio" name="q10" value="d"> Sleeping less</label>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault(); // Prevent form from submitting the traditional way
+
+            const correctAnswers = {
+                q1: 'b',
+                q2: 'c',
+                q3: 'd',
+                q4: 'c',
+                q5: 'd',
+                q6: 'c',
+                q7: 'c',
+                q8: 'c',
+                q9: 'b',
+                q10: 'b'
+            };
+
+            let totalCorrect = 0;
+            const form = document.getElementById('quiz-form');
+
+            // Check answers
+            for (const [question, correctAnswer] of Object.entries(correctAnswers)) {
+                const userAnswer = form.elements[question].value;
+                if (userAnswer === correctAnswer) {
+                    totalCorrect++;
+                }
+            }
+
+            // Store the result in sessionStorage
+            sessionStorage.setItem('quizScore', totalCorrect);
+
+            // Redirect to result page
+            window.location.href = 'quiz-result.html';
+        }
+    </script>
+    <script src="js/nav-bar.js"></script>
+</body>
+</html>
